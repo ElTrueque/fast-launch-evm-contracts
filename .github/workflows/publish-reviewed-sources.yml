@@ -1,0 +1,35 @@
+name: Publish reviewed Fast Launch sources
+on:
+  workflow_dispatch:
+  push:
+    paths: ['.github/workflows/publish-reviewed-sources.yml']
+    branches: [main]
+permissions:
+  contents: write
+concurrency:
+  group: reviewed-source-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Verify bundle and publish reviewed tree
+        env:
+          SOURCE_BUNDLE_SHA256: d98f97e925a1f3b17d40a70fa164b112453a98025d7157caf5c704ef2ec41516
+        run: python3 publish-reviewed-sources.py
+      - name: Publish release and cryptographic proof
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          tag=fast-launch-variable-supply-2026-10-12
+          if gh release view "$tag" >/dev/null 2>&1; then
+            echo "Release already exists; immutable tag was checked."
+          else
+            gh release create "$tag" --verify-tag --title "Fast Launch variable supply - 12 October 2026" --notes-file release-notes.txt reviewed-sources.zip publication-proof.json
+          fi
