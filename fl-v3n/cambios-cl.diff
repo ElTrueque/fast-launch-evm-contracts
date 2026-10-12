@@ -1,0 +1,199 @@
+--- fl-eth/src/cl/FastLaunchFactoryCL.sol	2026-10-09 23:46:13.667097799 +0000
++++ fl-v3n/src/cl/FastLaunchFactoryCL.sol	2026-10-12 01:54:28.335521842 +0000
+@@ -43,9 +43,9 @@
+ import {ReentrancyGuard} from "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+ import {TickMath} from "@uniswap/v4-core/src/libraries/TickMath.sol";
+ import {SwapMath} from "@uniswap/v4-core/src/libraries/SwapMath.sol";
+-import {FastLaunchToken} from "../FastLaunchToken.sol";
++import {FastLaunchTokenETH} from "../FastLaunchTokenETH.sol";
+ import {FastLaunchRegistry} from "../FastLaunchRegistry.sol";
+-import {FastLaunchMath} from "../FastLaunchMath.sol";
++import {FastLaunchMathETH} from "../FastLaunchMathETH.sol";
+ import {FastLaunchLockerCL} from "./FastLaunchLockerCL.sol";
+ import {FastLaunchComponentsCL} from "./FastLaunchComponentsCL.sol";
+ import {IV3Factory, IV3Pool, IWrappedNative} from "./IV3.sol";
+@@ -76,6 +76,7 @@
+         bytes32 configurationHash;
+         uint256 deadline;
+         bool toHolders;
++        uint256 supply;
+     }
+ 
+     /// @dev Same layout as v1/v2. `poolId` holds the pool address, left-padded, for v3 style pools.
+@@ -88,11 +89,13 @@
+         uint256 effectiveValuation;
+         uint256 creatorTokens;
+         address holderRewards;
++        uint256 supply;
+     }
+ 
+     uint24 public constant FEE = 10000;
+-    uint256 public constant SUPPLY = 1_000_000 ether;
+-    string public constant VERSION = "2.0.0";
++    uint256 public constant MIN_SUPPLY = 1_000 ether;
++    uint256 public constant MAX_SUPPLY = 1_000_000_000_000 ether;
++    string public constant VERSION = "3.0.0-cl";
+     FastLaunchRegistry public immutable registry;
+     FastLaunchComponentsCL public immutable components;
+     address public immutable dexFactory;
+@@ -118,6 +121,7 @@
+     error TransferFailed();
+     error UnexpectedPool();
+     error PoolManipulated();
++    error InvalidSupply();
+ 
+     event Launched(
+         address indexed token,
+@@ -126,7 +130,8 @@
+         bytes32 poolId,
+         address quote,
+         uint256 effectiveValuation,
+-        string metadataCID
++        string metadataCID,
++        uint256 supply
+     );
+     event CreatorPurchase(address indexed token, uint256 quoteSpent, uint256 tokensReceived);
+     event FeeDistributionChosen(address indexed token, bool toHolders, address recipient);
+@@ -159,7 +164,7 @@
+     function predictToken(address creator, Create calldata p) public view returns (address) {
+         bytes32 salt = keccak256(abi.encode(creator, p.salt));
+         bytes32 init =
+-            keccak256(abi.encodePacked(type(FastLaunchToken).creationCode, abi.encode(p.name, p.symbol, p.metadataCID)));
++            keccak256(abi.encodePacked(type(FastLaunchTokenETH).creationCode, abi.encode(p.name, p.symbol, p.metadataCID, p.supply)));
+         return address(uint160(uint256(keccak256(abi.encodePacked(bytes1(0xff), address(this), salt, init)))));
+     }
+ 
+@@ -177,13 +182,14 @@
+     function preview(address creator, Create calldata p)
+         external
+         view
+-        returns (address token, FastLaunchMath.Range memory range, address pool)
++        returns (address token, FastLaunchMathETH.Range memory range, address pool)
+     {
+         (FastLaunchRegistry.Quote memory q,,,) = registry.configuration(p.quote);
+         if (q.kind == FastLaunchRegistry.Kind.Disabled) revert NotAllowed();
++        _supply(p.supply);
+         token = predictToken(creator, p);
+         address pq = p.quote == address(0) ? wrappedNative : p.quote;
+-        range = FastLaunchMath.quote(p.valuation, token < pq, tickSpacing);
++        range = FastLaunchMathETH.quote(p.valuation, p.supply, token < pq, tickSpacing);
+         pool = poolAddress(token, p.quote);
+     }
+ 
+@@ -197,11 +203,12 @@
+         if (q.kind == FastLaunchRegistry.Kind.Disabled || p.buyAmount > uint256(type(int256).max)) {
+             revert InvalidConfiguration();
+         }
+-        maximumTokens = uint256(o.creatorBuyBps) * SUPPLY / 10000;
++        _supply(p.supply);
++        maximumTokens = uint256(o.creatorBuyBps) * p.supply / 10000;
+         if (p.buyAmount == 0) return (0, 0, 0, maximumTokens);
+         address pq = p.quote == address(0) ? wrappedNative : p.quote;
+         bool first = predictToken(creator, p) < pq;
+-        FastLaunchMath.Range memory r = FastLaunchMath.quote(p.valuation, first, tickSpacing);
++        FastLaunchMathETH.Range memory r = FastLaunchMathETH.quote(p.valuation, p.supply, first, tickSpacing);
+         (, uint256 input, uint256 output, uint256 fee) = SwapMath.computeSwapStep(
+             r.price, TickMath.getSqrtPriceAtTick(first ? r.upper : r.lower), r.liquidity, -int256(p.buyAmount), FEE
+         );
+@@ -218,12 +225,13 @@
+                 || p.valuation > q.maxValuation
+         ) revert InvalidConfiguration();
+         _metadata(p);
++        _supply(p.supply);
+         if (msg.value != fee + (p.quote == address(0) ? p.buyAmount : 0)) revert IncorrectPayment();
+         if ((p.buyAmount == 0 && p.minTokens != 0) || (p.buyAmount > 0 && p.minTokens == 0)) revert MinimumOutput();
+         token =
+-            address(new FastLaunchToken{salt: keccak256(abi.encode(msg.sender, p.salt))}(p.name, p.symbol, p.metadataCID));
++            address(new FastLaunchTokenETH{salt: keccak256(abi.encode(msg.sender, p.salt))}(p.name, p.symbol, p.metadataCID, p.supply));
+         address pq = p.quote == address(0) ? wrappedNative : p.quote;
+-        FastLaunchMath.Range memory r = FastLaunchMath.quote(p.valuation, token < pq, tickSpacing);
++        FastLaunchMathETH.Range memory r = FastLaunchMathETH.quote(p.valuation, p.supply, token < pq, tickSpacing);
+         if (r.valuation < q.minValuation || r.valuation > q.maxValuation) revert InvalidConfiguration();
+         address pool = _preparePool(token, pq, r.price);
+         address rewards;
+@@ -231,19 +239,19 @@
+             pool, token, p.quote, pq, msg.sender, registry.treasury(), r.lower, r.upper, r.liquidity, p.toHolders,
+             registry.snapshotSigner()
+         );
+-        IERC20(token).safeTransfer(locker, SUPPLY);
++        IERC20(token).safeTransfer(locker, p.supply);
+         FastLaunchLockerCL(payable(locker)).seed();
+         uint256 bought;
+-        if (p.buyAmount > 0) bought = _creatorBuy(pool, token, pq, p, uint256(o.creatorBuyBps) * SUPPLY / 10000);
++        if (p.buyAmount > 0) bought = _creatorBuy(pool, token, pq, p, uint256(o.creatorBuyBps) * p.supply / 10000);
+         bytes32 id = bytes32(uint256(uint160(pool)));
+-        launches[token] = Launch(msg.sender, p.quote, locker, id, p.valuation, r.valuation, bought, rewards);
++        launches[token] = Launch(msg.sender, p.quote, locker, id, p.valuation, r.valuation, bought, rewards, p.supply);
+         tokens.push(token);
+         emit FeeDistributionChosen(token, p.toHolders, p.toHolders ? rewards : msg.sender);
+         if (fee > 0) {
+             (bool ok,) = registry.treasury().call{value: fee}("");
+             if (!ok) revert TransferFailed();
+         }
+-        emit Launched(token, msg.sender, locker, id, p.quote, r.valuation, p.metadataCID);
++        emit Launched(token, msg.sender, locker, id, p.quote, r.valuation, p.metadataCID, p.supply);
+     }
+ 
+     /// @dev Anyone can create a v3 pool for an address that has no code yet. If that happened, the price
+@@ -341,6 +349,11 @@
+         if (!((c[0] == 0x51 && c[1] == 0x6d && c.length == 46) || (c[0] == 0x62 && c.length >= 50))) revert InvalidMetadata();
+     }
+ 
++    /// @dev Same rule as FastLaunchFactoryETH: whole tokens from one thousand to one trillion.
++    function _supply(uint256 supply) private pure {
++        if (supply < MIN_SUPPLY || supply > MAX_SUPPLY || supply % 1 ether != 0) revert InvalidSupply();
++    }
++
+     function launchCount() external view returns (uint256) {
+         return tokens.length;
+     }
+--- fl-eth/src/cl/FastLaunchLockerCL.sol	2026-10-09 23:46:13.666912121 +0000
++++ fl-v3n/src/cl/FastLaunchLockerCL.sol	2026-10-12 01:54:28.336301669 +0000
+@@ -51,7 +51,6 @@
+ contract FastLaunchLockerCL is ReentrancyGuard {
+     using SafeERC20 for IERC20;
+     address public constant DEAD = 0x000000000000000000000000000000000000dEaD;
+-    uint256 public constant SUPPLY = 1_000_000 ether;
+     address public immutable pool;
+     address public immutable factory;
+     address public immutable token;
+@@ -111,11 +110,12 @@
+         if (msg.sender != factory) revert Unauthorized();
+         if (seeded) revert AlreadySeeded();
+         seeded = true;
++        uint256 received = IERC20(token).balanceOf(address(this));
+         minting = true;
+         IV3Pool(pool).mint(address(this), lower, upper, liquidity, "");
+         minting = false;
+         lockedDust = IERC20(token).balanceOf(address(this));
+-        emit LiquidityLocked(liquidity, SUPPLY - lockedDust, lockedDust);
++        emit LiquidityLocked(liquidity, received - lockedDust, lockedDust);
+     }
+ 
+     function _mintCallback(uint256 amount0, uint256 amount1) private {
+--- fl-eth/src/cl/FastLaunchComponentsCL.sol	2026-10-09 23:46:13.667020034 +0000
++++ fl-v3n/src/cl/FastLaunchComponentsCL.sol	2026-10-12 01:54:28.336718768 +0000
+@@ -39,7 +39,7 @@
+ */
+ 
+ import {FastLaunchLockerCL} from "./FastLaunchLockerCL.sol";
+-import {FastLaunchHolderRewards} from "../FastLaunchHolderRewards.sol";
++import {FastLaunchHolderRewardsETH} from "../FastLaunchHolderRewardsETH.sol";
+ 
+ /// @title Fast Launch by El Trueque
+ /// @author El Trueque
+@@ -66,12 +66,12 @@
+     ) external returns (address locker, address rewards) {
+         require(msg.sender == factory);
+         // The pool holds the locked supply: passing it as `manager` excludes it from holder snapshots.
+-        if (toHolders) rewards = address(new FastLaunchHolderRewards(token, quote, pool, factory, snapshotSigner));
++        if (toHolders) rewards = address(new FastLaunchHolderRewardsETH(token, quote, pool, factory, snapshotSigner));
+         locker = address(
+             new FastLaunchLockerCL(
+                 pool, token, quote, poolQuote, creator, treasury, lower, upper, liquidity, factory, toHolders ? rewards : creator
+             )
+         );
+-        if (toHolders) FastLaunchHolderRewards(payable(rewards)).bindSplitter(locker);
++        if (toHolders) FastLaunchHolderRewardsETH(payable(rewards)).bindSplitter(locker);
+     }
+ }

@@ -1,0 +1,52 @@
+{
+  "at": "2026-10-12T03:56:22.396Z",
+  "scope": "Public copy after documented Sepolia RPC substitution in bundled forge-std; no source contract changes.",
+  "contracts": [
+    {
+      "contractName": "FastLaunchRegistry",
+      "creationMatch": true,
+      "runtimeTemplateMatch": true,
+      "creationBytes": 4967,
+      "runtimeBytes": 3937,
+      "creationSha256": "12a5762f0328c10a8423050dd5ea5ad35405f7d7181d562ee8214ba562966883",
+      "runtimeTemplateSha256": "0643edb63c21de8c5c3db5b4fe5eff67014a8f37c0a72747e6c0f1378c6369a6"
+    },
+    {
+      "contractName": "FastLaunchFactoryCL",
+      "creationMatch": true,
+      "runtimeTemplateMatch": true,
+      "creationBytes": 32524,
+      "runtimeBytes": 18296,
+      "creationSha256": "33b58c7fe9175c25c68cbe20254e8221df9015ed4b054017cb11b52f3afc50cd",
+      "runtimeTemplateSha256": "36e6280bbe2cc97df265a9d816952628260f1467ae741f5cf1a127a527915e6a"
+    },
+    {
+      "contractName": "FastLaunchComponentsCL",
+      "creationMatch": true,
+      "runtimeTemplateMatch": true,
+      "creationBytes": 12712,
+      "runtimeBytes": 12667,
+      "creationSha256": "67c97674a6e4798a9ff1f3e7902f67ef8b7aa1c2997acc6bdf17b4cc9615ca91",
+      "runtimeTemplateSha256": "b7258ca032e69c88de34fa6a3aab7d1ea33ab6dbc6e05f018b037e38f1c078a9"
+    },
+    {
+      "contractName": "FastLaunchFactoryETH",
+      "creationMatch": true,
+      "runtimeTemplateMatch": true,
+      "creationBytes": 35184,
+      "runtimeBytes": 20890,
+      "creationSha256": "83791edce371b561faff051b24fbbe3984a6d517c592a50be7cfa6f4668469f7",
+      "runtimeTemplateSha256": "ad39521ba9b7630152a3a2f6c01f51f09184e80368c83e2c1a2a34fd621c91ee"
+    },
+    {
+      "contractName": "FastLaunchComponentsETH",
+      "creationMatch": true,
+      "runtimeTemplateMatch": true,
+      "creationBytes": 13903,
+      "runtimeBytes": 13844,
+      "creationSha256": "ece50d086ec98ae70e0ae196ef1552bb6468c053206aeda686353373fabab466",
+      "runtimeTemplateSha256": "3932f841a26bceb951f258959471094691cf85cdaee909c4f3dbd40c24cf0b44"
+    }
+  ],
+  "allPass": true
+}

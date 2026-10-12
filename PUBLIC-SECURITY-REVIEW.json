@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-12",
+  "scope": "Only this allowlisted public source bundle; no private repository history",
+  "checks": [
+    "No wallet, keystore, environment, broadcast or cache files",
+    "No Helius endpoints or embedded RPC credentials detected",
+    "Credential-pattern scan and manual URL review",
+    "Independent second review of 132 files excluding vendor self-tests"
+  ],
+  "sanitization": [
+    "Vendor Sepolia Infura project URL replaced with public Sepolia RPC",
+    "Vendor self-tests containing a universal example mnemonic omitted"
+  ],
+  "contractsUnchanged": true,
+  "publicBuildReproducibility": "verification/public-bytecode-reproducibility.json",
+  "findingsRequiringRemediation": 0,
+  "limitation": "Static inspection reduces disclosure risk; it is not a mathematical guarantee against all unknown secret formats."
+}

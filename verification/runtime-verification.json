@@ -1,0 +1,1439 @@
+{
+  "generatedAt": "2026-10-12T03:48:26.829Z",
+  "sourceFilesMatch": true,
+  "contracts": [
+    {
+      "network": "bnb",
+      "chainId": 56,
+      "role": "registry",
+      "address": "0x9E68eD3cF5c323F07Bcd006f448BD63f1bFe8494",
+      "contractName": "FastLaunchRegistry",
+      "block": "0x794072a",
+      "creation": {
+        "network": "bnb",
+        "chainId": 56,
+        "role": "registry",
+        "address": "0x9E68eD3cF5c323F07Bcd006f448BD63f1bFe8494",
+        "contractName": "FastLaunchRegistry",
+        "contractPath": "src/FastLaunchRegistry.sol",
+        "standardJson": "standard-json/FastLaunchRegistry.json",
+        "creationTransactionHash": "0x21ac9b9a9137b42f81feae93ce98671fecc866a1325ce9bbfc9200356bf3599f",
+        "creationType": "top-level CREATE",
+        "deployer": "0xc570fbeb05fe1ca1bd52b7780d747021d6aab245",
+        "constructorArguments": "0x000000000000000000000000c570fbeb05fe1ca1bd52b7780d747021d6aab2450000000000000000000000001dd6785c96328fb2d8d312c01611a828e6b208e30000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000271000000000000000000000000000000000000000000000000000000000000027100000000000000000000000000000000000000000000000000000000000002710000000000000000000000000000000000000000000000000000000000000271000000000000000000000000000000000000000000000000000000000000000c80000000000000000000000000000000000000000000000000000000000000000",
+        "constructorArgumentsHuman": [
+          "0xc570FBEB05FE1CA1bd52B7780D747021D6AAb245",
+          "0x1Dd6785c96328FB2d8D312c01611a828E6B208E3",
+          "(1, 10000, 10000, 10000, 10000, 200)",
+          "0"
+        ],
+        "creationBytecodeMatchesLocal": true,
+        "creationAddressMatches": true
+      },
+      "immutableChecks": [
+        {
+          "id": "61861",
+          "name": "treasury",
+          "type": "address payable",
+          "expected": "0x1Dd6785c96328FB2d8D312c01611a828E6B208E3",
+          "getterResult": "0x0000000000000000000000001dd6785c96328fb2d8d312c01611a828e6b208e3",
+          "ranges": [
+            {
+              "start": 1654,
+              "length": 32
+            },
+            {
+              "start": 2242,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x0000000000000000000000001dd6785c96328fb2d8d312c01611a828e6b208e3",
+            "0x0000000000000000000000001dd6785c96328fb2d8d312c01611a828e6b208e3"
+          ],
+          "match": true
+        }
+      ],
+      "runtimeBytes": 3937,
+      "compiledRuntimeBytes": 3937,
+      "runtimeSha256": "40a5fb163cf25aa3ea57583639833c353e60597308af86e8c3866b9a0aaf6ca5",
+      "runtimeKeccak256": "0x5ded11f31bd0a86dc0080c646d6da3598655d1ccbfca648b4647e8e2fcafe2cf",
+      "immutableRanges": 2,
+      "runtimeMatchExcludingOnlyCompilerImmutableRanges": true,
+      "allImmutableValuesMatch": true,
+      "exactRuntimeMatchesAfterExpectedImmutableSubstitution": true,
+      "maskedRuntimeSha256": "0643edb63c21de8c5c3db5b4fe5eff67014a8f37c0a72747e6c0f1378c6369a6",
+      "creationTransactionConfirmed": true,
+      "creationBlock": "0x793f44c",
+      "creationBlockHash": "0xd8e126036879780fb140a21f41cdfc8bfeb07728a119a64505d147d319b40bff",
+      "creationTransactionInputMatchesJournal": true,
+      "creationTransactionMatchesCompiledCodeAndArguments": true,
+      "pass": true
+    },
+    {
+      "network": "bnb",
+      "chainId": 56,
+      "role": "factory",
+      "address": "0x8a0E2D1F6EE3BB99618D5E65ccBfAf0468d10367",
+      "contractName": "FastLaunchFactoryCL",
+      "block": "0x794072a",
+      "creation": {
+        "network": "bnb",
+        "chainId": 56,
+        "role": "factory",
+        "address": "0x8a0E2D1F6EE3BB99618D5E65ccBfAf0468d10367",
+        "contractName": "FastLaunchFactoryCL",
+        "contractPath": "src/cl/FastLaunchFactoryCL.sol",
+        "standardJson": "standard-json/FastLaunchFactoryCL.json",
+        "creationTransactionHash": "0x0aa5af410d7a02a25742637cd173e9a0e4d90f51ea3129675925518691568feb",
+        "creationType": "top-level CREATE",
+        "deployer": "0xc570fbeb05fe1ca1bd52b7780d747021d6aab245",
+        "constructorArguments": "0x0000000000000000000000009e68ed3cf5c323f07bcd006f448bd63f1bfe84940000000000000000000000000bfbcf9fa4f9c56b0f40a671ad40e0805a09186500000000000000000000000041ff9aa7e16b8b1a8a8dc4f0efacd93d02d071c9000000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c6ce8eb472fa82df5469c6ab6d485f17c3ad13c8cd7af59b3d4a8026c5ce0f7e200000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000000e50616e63616b6553776170207633000000000000000000000000000000000000",
+        "constructorArgumentsHuman": [
+          "0x9E68eD3cF5c323F07Bcd006f448BD63f1bFe8494",
+          "(0x0BFbCF9fa4f9C56B0F40a671Ad40E0805A091865, 0x41ff9AA7e16B8B1a8a8dc4f0eFacd93D02d071c9, 0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c, 0x6ce8eb472fa82df5469c6ab6d485f17c3ad13c8cd7af59b3d4a8026c5ce0f7e2)",
+          "PancakeSwap v3"
+        ],
+        "creationBytecodeMatchesLocal": true,
+        "creationAddressMatches": true
+      },
+      "immutableChecks": [
+        {
+          "id": "64542",
+          "name": "registry",
+          "type": "contract FastLaunchRegistry",
+          "expected": "0x9E68eD3cF5c323F07Bcd006f448BD63f1bFe8494",
+          "getterResult": "0x0000000000000000000000009e68ed3cf5c323f07bcd006f448bd63f1bfe8494",
+          "ranges": [
+            {
+              "start": 789,
+              "length": 32
+            },
+            {
+              "start": 1274,
+              "length": 32
+            },
+            {
+              "start": 1657,
+              "length": 32
+            },
+            {
+              "start": 3128,
+              "length": 32
+            },
+            {
+              "start": 3256,
+              "length": 32
+            },
+            {
+              "start": 4352,
+              "length": 32
+            },
+            {
+              "start": 9701,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x0000000000000000000000009e68ed3cf5c323f07bcd006f448bd63f1bfe8494",
+            "0x0000000000000000000000009e68ed3cf5c323f07bcd006f448bd63f1bfe8494",
+            "0x0000000000000000000000009e68ed3cf5c323f07bcd006f448bd63f1bfe8494",
+            "0x0000000000000000000000009e68ed3cf5c323f07bcd006f448bd63f1bfe8494",
+            "0x0000000000000000000000009e68ed3cf5c323f07bcd006f448bd63f1bfe8494",
+            "0x0000000000000000000000009e68ed3cf5c323f07bcd006f448bd63f1bfe8494",
+            "0x0000000000000000000000009e68ed3cf5c323f07bcd006f448bd63f1bfe8494"
+          ],
+          "match": true
+        },
+        {
+          "id": "64545",
+          "name": "components",
+          "type": "contract FastLaunchComponentsCL",
+          "expected": "0x2271c2eB18e6c8e482BFf17e3598402507a25267",
+          "getterResult": "0x0000000000000000000000002271c2eb18e6c8e482bff17e3598402507a25267",
+          "ranges": [
+            {
+              "start": 592,
+              "length": 32
+            },
+            {
+              "start": 3431,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x0000000000000000000000002271c2eb18e6c8e482bff17e3598402507a25267",
+            "0x0000000000000000000000002271c2eb18e6c8e482bff17e3598402507a25267"
+          ],
+          "match": true
+        },
+        {
+          "id": "64547",
+          "name": "dexFactory",
+          "type": "address",
+          "expected": "0x0BFbCF9fa4f9C56B0F40a671Ad40E0805A091865",
+          "getterResult": "0x0000000000000000000000000bfbcf9fa4f9c56b0f40a671ad40e0805a091865",
+          "ranges": [
+            {
+              "start": 661,
+              "length": 32
+            },
+            {
+              "start": 2720,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x0000000000000000000000000bfbcf9fa4f9c56b0f40a671ad40e0805a091865",
+            "0x0000000000000000000000000bfbcf9fa4f9c56b0f40a671ad40e0805a091865"
+          ],
+          "match": true
+        },
+        {
+          "id": "64549",
+          "name": "poolDeployer",
+          "type": "address",
+          "expected": "0x41ff9AA7e16B8B1a8a8dc4f0eFacd93D02d071c9",
+          "getterResult": "0x00000000000000000000000041ff9aa7e16b8b1a8a8dc4f0efacd93d02d071c9",
+          "ranges": [
+            {
+              "start": 7393,
+              "length": 32
+            },
+            {
+              "start": 9507,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x00000000000000000000000041ff9aa7e16b8b1a8a8dc4f0efacd93d02d071c9",
+            "0x00000000000000000000000041ff9aa7e16b8b1a8a8dc4f0efacd93d02d071c9"
+          ],
+          "match": true
+        },
+        {
+          "id": "64551",
+          "name": "wrappedNative",
+          "type": "address",
+          "expected": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+          "getterResult": "0x000000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+          "ranges": [
+            {
+              "start": 373,
+              "length": 32
+            },
+            {
+              "start": 923,
+              "length": 32
+            },
+            {
+              "start": 2532,
+              "length": 32
+            },
+            {
+              "start": 2814,
+              "length": 32
+            },
+            {
+              "start": 4685,
+              "length": 32
+            },
+            {
+              "start": 4759,
+              "length": 32
+            },
+            {
+              "start": 9367,
+              "length": 32
+            },
+            {
+              "start": 9862,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x000000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+            "0x000000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+            "0x000000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+            "0x000000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+            "0x000000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+            "0x000000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+            "0x000000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+            "0x000000000000000000000000bb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"
+          ],
+          "match": true
+        },
+        {
+          "id": "64553",
+          "name": "poolInitCodeHash",
+          "type": "bytes32",
+          "expected": "0x6ce8eb472fa82df5469c6ab6d485f17c3ad13c8cd7af59b3d4a8026c5ce0f7e2",
+          "getterResult": "0x6ce8eb472fa82df5469c6ab6d485f17c3ad13c8cd7af59b3d4a8026c5ce0f7e2",
+          "ranges": [
+            {
+              "start": 444,
+              "length": 32
+            },
+            {
+              "start": 9554,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x6ce8eb472fa82df5469c6ab6d485f17c3ad13c8cd7af59b3d4a8026c5ce0f7e2",
+            "0x6ce8eb472fa82df5469c6ab6d485f17c3ad13c8cd7af59b3d4a8026c5ce0f7e2"
+          ],
+          "match": true
+        },
+        {
+          "id": "64555",
+          "name": "tickSpacing",
+          "type": "int24",
+          "expected": 200,
+          "getterResult": "0x00000000000000000000000000000000000000000000000000000000000000c8",
+          "ranges": [
+            {
+              "start": 503,
+              "length": 32
+            },
+            {
+              "start": 970,
+              "length": 32
+            },
+            {
+              "start": 2570,
+              "length": 32
+            },
+            {
+              "start": 7167,
+              "length": 32
+            },
+            {
+              "start": 9916,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x00000000000000000000000000000000000000000000000000000000000000c8",
+            "0x00000000000000000000000000000000000000000000000000000000000000c8",
+            "0x00000000000000000000000000000000000000000000000000000000000000c8",
+            "0x00000000000000000000000000000000000000000000000000000000000000c8",
+            "0x00000000000000000000000000000000000000000000000000000000000000c8"
+          ],
+          "match": true
+        }
+      ],
+      "runtimeBytes": 18296,
+      "compiledRuntimeBytes": 18296,
+      "runtimeSha256": "a6838b775e96ba145c111775335a87f298f5ea3079f8c78c69889168e2addbae",
+      "runtimeKeccak256": "0x7e8bcbfe3f0c8ed8487c48536e688628ca41ecdba0394658e9c74fbfd9ef8226",
+      "immutableRanges": 28,
+      "runtimeMatchExcludingOnlyCompilerImmutableRanges": true,
+      "allImmutableValuesMatch": true,
+      "exactRuntimeMatchesAfterExpectedImmutableSubstitution": true,
+      "maskedRuntimeSha256": "36e6280bbe2cc97df265a9d816952628260f1467ae741f5cf1a127a527915e6a",
+      "creationTransactionConfirmed": true,
+      "creationBlock": "0x793f451",
+      "creationBlockHash": "0xe60b36eef93eae1c19a9d91fb7669ad9b705d4f5c23b96dc5797c5838a7e1abe",
+      "creationTransactionInputMatchesJournal": true,
+      "creationTransactionMatchesCompiledCodeAndArguments": true,
+      "pass": true
+    },
+    {
+      "network": "bnb",
+      "chainId": 56,
+      "role": "components",
+      "address": "0x2271c2eB18e6c8e482BFf17e3598402507a25267",
+      "contractName": "FastLaunchComponentsCL",
+      "block": "0x794072a",
+      "creation": {
+        "network": "bnb",
+        "chainId": 56,
+        "role": "components",
+        "address": "0x2271c2eB18e6c8e482BFf17e3598402507a25267",
+        "contractName": "FastLaunchComponentsCL",
+        "contractPath": "src/cl/FastLaunchComponentsCL.sol",
+        "standardJson": "standard-json/FastLaunchComponentsCL.json",
+        "creationTransactionHash": "0x0aa5af410d7a02a25742637cd173e9a0e4d90f51ea3129675925518691568feb",
+        "creationType": "internal CREATE by factory",
+        "deployer": "0x8a0E2D1F6EE3BB99618D5E65ccBfAf0468d10367",
+        "constructorArguments": "0x",
+        "constructorArgumentsHuman": [],
+        "creationBytecodeMatchesLocal": true,
+        "creationAddressMatches": true
+      },
+      "immutableChecks": [
+        {
+          "id": "64340",
+          "name": "factory",
+          "type": "address",
+          "expected": "0x8a0E2D1F6EE3BB99618D5E65ccBfAf0468d10367",
+          "getterResult": "0x0000000000000000000000008a0e2d1f6ee3bb99618d5e65ccbfaf0468d10367",
+          "ranges": [
+            {
+              "start": 73,
+              "length": 32
+            },
+            {
+              "start": 371,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x0000000000000000000000008a0e2d1f6ee3bb99618d5e65ccbfaf0468d10367",
+            "0x0000000000000000000000008a0e2d1f6ee3bb99618d5e65ccbfaf0468d10367"
+          ],
+          "match": true
+        }
+      ],
+      "runtimeBytes": 12667,
+      "compiledRuntimeBytes": 12667,
+      "runtimeSha256": "254f6244190de8c65ac140f825634243c2da3a61bfa9e39617cc66426f1063cf",
+      "runtimeKeccak256": "0x060a19e22b5806984ad3f7950b2ebd79d83e63ec2bbbe0ac968bc07dbbdcc890",
+      "immutableRanges": 2,
+      "runtimeMatchExcludingOnlyCompilerImmutableRanges": true,
+      "allImmutableValuesMatch": true,
+      "exactRuntimeMatchesAfterExpectedImmutableSubstitution": true,
+      "maskedRuntimeSha256": "b7258ca032e69c88de34fa6a3aab7d1ea33ab6dbc6e05f018b037e38f1c078a9",
+      "creationTransactionConfirmed": true,
+      "creationBlock": "0x793f451",
+      "creationBlockHash": "0xe60b36eef93eae1c19a9d91fb7669ad9b705d4f5c23b96dc5797c5838a7e1abe",
+      "creationTransactionInputMatchesJournal": true,
+      "internalCreationEvidence": "initCode from local broadcast journal; deterministic factory nonce 1; on-chain factory.components() is checked in factory row",
+      "pass": true
+    },
+    {
+      "network": "hyperevm",
+      "chainId": 999,
+      "role": "registry",
+      "address": "0xE04c3FdfbCBCA945A86f78d18467AB7550156691",
+      "contractName": "FastLaunchRegistry",
+      "block": "0x2e12fb0",
+      "creation": {
+        "network": "hyperevm",
+        "chainId": 999,
+        "role": "registry",
+        "address": "0xE04c3FdfbCBCA945A86f78d18467AB7550156691",
+        "contractName": "FastLaunchRegistry",
+        "contractPath": "src/FastLaunchRegistry.sol",
+        "standardJson": "standard-json/FastLaunchRegistry.json",
+        "creationTransactionHash": "0x82024737a45a19003a1a6189d3a2b3fbe6f398dab9f30868b38d356d2ee319c4",
+        "creationType": "top-level CREATE",
+        "deployer": "0x22db1f7baf9e7eccdf7183ab442a3ea4a7cd1210",
+        "constructorArguments": "0x00000000000000000000000022db1f7baf9e7eccdf7183ab442a3ea4a7cd12100000000000000000000000001dd6785c96328fb2d8d312c01611a828e6b208e30000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000271000000000000000000000000000000000000000000000000000000000000027100000000000000000000000000000000000000000000000000000000000002710000000000000000000000000000000000000000000000000000000000000271000000000000000000000000000000000000000000000000000000000000000c80000000000000000000000000000000000000000000000000000000000000000",
+        "constructorArgumentsHuman": [
+          "0x22DB1f7bAf9e7ECCDf7183Ab442A3EA4A7cd1210",
+          "0x1Dd6785c96328FB2d8D312c01611a828E6B208E3",
+          "(1, 10000, 10000, 10000, 10000, 200)",
+          "0"
+        ],
+        "creationBytecodeMatchesLocal": true,
+        "creationAddressMatches": true
+      },
+      "immutableChecks": [
+        {
+          "id": "61861",
+          "name": "treasury",
+          "type": "address payable",
+          "expected": "0x1Dd6785c96328FB2d8D312c01611a828E6B208E3",
+          "getterResult": "0x0000000000000000000000001dd6785c96328fb2d8d312c01611a828e6b208e3",
+          "ranges": [
+            {
+              "start": 1654,
+              "length": 32
+            },
+            {
+              "start": 2242,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x0000000000000000000000001dd6785c96328fb2d8d312c01611a828e6b208e3",
+            "0x0000000000000000000000001dd6785c96328fb2d8d312c01611a828e6b208e3"
+          ],
+          "match": true
+        }
+      ],
+      "runtimeBytes": 3937,
+      "compiledRuntimeBytes": 3937,
+      "runtimeSha256": "40a5fb163cf25aa3ea57583639833c353e60597308af86e8c3866b9a0aaf6ca5",
+      "runtimeKeccak256": "0x5ded11f31bd0a86dc0080c646d6da3598655d1ccbfca648b4647e8e2fcafe2cf",
+      "immutableRanges": 2,
+      "runtimeMatchExcludingOnlyCompilerImmutableRanges": true,
+      "allImmutableValuesMatch": true,
+      "exactRuntimeMatchesAfterExpectedImmutableSubstitution": true,
+      "maskedRuntimeSha256": "0643edb63c21de8c5c3db5b4fe5eff67014a8f37c0a72747e6c0f1378c6369a6",
+      "creationTransactionConfirmed": true,
+      "creationBlock": "0x2e1299e",
+      "creationBlockHash": "0x0977ea3a0c9a6df77800e0ab491404b56f6da2eae7b52d11f64d0195f44b7f95",
+      "creationTransactionInputMatchesJournal": true,
+      "creationTransactionMatchesCompiledCodeAndArguments": true,
+      "pass": true
+    },
+    {
+      "network": "hyperevm",
+      "chainId": 999,
+      "role": "factory",
+      "address": "0x88484e4304604446F43D2751d50FCfb1dc027d37",
+      "contractName": "FastLaunchFactoryCL",
+      "block": "0x2e12fb0",
+      "creation": {
+        "network": "hyperevm",
+        "chainId": 999,
+        "role": "factory",
+        "address": "0x88484e4304604446F43D2751d50FCfb1dc027d37",
+        "contractName": "FastLaunchFactoryCL",
+        "contractPath": "src/cl/FastLaunchFactoryCL.sol",
+        "standardJson": "standard-json/FastLaunchFactoryCL.json",
+        "creationTransactionHash": "0xcc0f15f20dd45d3b7ea3eb14a4b3ff71d06897f47660b28d38d48ed3186fc176",
+        "creationType": "top-level CREATE",
+        "deployer": "0x22db1f7baf9e7eccdf7183ab442a3ea4a7cd1210",
+        "constructorArguments": "0x000000000000000000000000e04c3fdfbcbca945a86f78d18467ab7550156691000000000000000000000000ff7b3e8c00e57ea31477c32a5b52a58eea47b072000000000000000000000000ff7b3e8c00e57ea31477c32a5b52a58eea47b07200000000000000000000000055555555555555555555555555555555555555557ef2b01a451cbf890790278981756372e549443802ece149dc0b592cbc114ee900000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000000950726f6a65637420580000000000000000000000000000000000000000000000",
+        "constructorArgumentsHuman": [
+          "0xE04c3FdfbCBCA945A86f78d18467AB7550156691",
+          "(0xFf7B3e8C00e57ea31477c32A5B52a58Eea47b072, 0xFf7B3e8C00e57ea31477c32A5B52a58Eea47b072, 0x5555555555555555555555555555555555555555, 0x7ef2b01a451cbf890790278981756372e549443802ece149dc0b592cbc114ee9)",
+          "Project X"
+        ],
+        "creationBytecodeMatchesLocal": true,
+        "creationAddressMatches": true
+      },
+      "immutableChecks": [
+        {
+          "id": "64542",
+          "name": "registry",
+          "type": "contract FastLaunchRegistry",
+          "expected": "0xE04c3FdfbCBCA945A86f78d18467AB7550156691",
+          "getterResult": "0x000000000000000000000000e04c3fdfbcbca945a86f78d18467ab7550156691",
+          "ranges": [
+            {
+              "start": 789,
+              "length": 32
+            },
+            {
+              "start": 1274,
+              "length": 32
+            },
+            {
+              "start": 1657,
+              "length": 32
+            },
+            {
+              "start": 3128,
+              "length": 32
+            },
+            {
+              "start": 3256,
+              "length": 32
+            },
+            {
+              "start": 4352,
+              "length": 32
+            },
+            {
+              "start": 9701,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x000000000000000000000000e04c3fdfbcbca945a86f78d18467ab7550156691",
+            "0x000000000000000000000000e04c3fdfbcbca945a86f78d18467ab7550156691",
+            "0x000000000000000000000000e04c3fdfbcbca945a86f78d18467ab7550156691",
+            "0x000000000000000000000000e04c3fdfbcbca945a86f78d18467ab7550156691",
+            "0x000000000000000000000000e04c3fdfbcbca945a86f78d18467ab7550156691",
+            "0x000000000000000000000000e04c3fdfbcbca945a86f78d18467ab7550156691",
+            "0x000000000000000000000000e04c3fdfbcbca945a86f78d18467ab7550156691"
+          ],
+          "match": true
+        },
+        {
+          "id": "64545",
+          "name": "components",
+          "type": "contract FastLaunchComponentsCL",
+          "expected": "0xa56385A5C8c970027A1BdAf8f209E39306e968bd",
+          "getterResult": "0x000000000000000000000000a56385a5c8c970027a1bdaf8f209e39306e968bd",
+          "ranges": [
+            {
+              "start": 592,
+              "length": 32
+            },
+            {
+              "start": 3431,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x000000000000000000000000a56385a5c8c970027a1bdaf8f209e39306e968bd",
+            "0x000000000000000000000000a56385a5c8c970027a1bdaf8f209e39306e968bd"
+          ],
+          "match": true
+        },
+        {
+          "id": "64547",
+          "name": "dexFactory",
+          "type": "address",
+          "expected": "0xFf7B3e8C00e57ea31477c32A5B52a58Eea47b072",
+          "getterResult": "0x000000000000000000000000ff7b3e8c00e57ea31477c32a5b52a58eea47b072",
+          "ranges": [
+            {
+              "start": 661,
+              "length": 32
+            },
+            {
+              "start": 2720,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x000000000000000000000000ff7b3e8c00e57ea31477c32a5b52a58eea47b072",
+            "0x000000000000000000000000ff7b3e8c00e57ea31477c32a5b52a58eea47b072"
+          ],
+          "match": true
+        },
+        {
+          "id": "64549",
+          "name": "poolDeployer",
+          "type": "address",
+          "expected": "0xFf7B3e8C00e57ea31477c32A5B52a58Eea47b072",
+          "getterResult": "0x000000000000000000000000ff7b3e8c00e57ea31477c32a5b52a58eea47b072",
+          "ranges": [
+            {
+              "start": 7393,
+              "length": 32
+            },
+            {
+              "start": 9507,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x000000000000000000000000ff7b3e8c00e57ea31477c32a5b52a58eea47b072",
+            "0x000000000000000000000000ff7b3e8c00e57ea31477c32a5b52a58eea47b072"
+          ],
+          "match": true
+        },
+        {
+          "id": "64551",
+          "name": "wrappedNative",
+          "type": "address",
+          "expected": "0x5555555555555555555555555555555555555555",
+          "getterResult": "0x0000000000000000000000005555555555555555555555555555555555555555",
+          "ranges": [
+            {
+              "start": 373,
+              "length": 32
+            },
+            {
+              "start": 923,
+              "length": 32
+            },
+            {
+              "start": 2532,
+              "length": 32
+            },
+            {
+              "start": 2814,
+              "length": 32
+            },
+            {
+              "start": 4685,
+              "length": 32
+            },
+            {
+              "start": 4759,
+              "length": 32
+            },
+            {
+              "start": 9367,
+              "length": 32
+            },
+            {
+              "start": 9862,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x0000000000000000000000005555555555555555555555555555555555555555",
+            "0x0000000000000000000000005555555555555555555555555555555555555555",
+            "0x0000000000000000000000005555555555555555555555555555555555555555",
+            "0x0000000000000000000000005555555555555555555555555555555555555555",
+            "0x0000000000000000000000005555555555555555555555555555555555555555",
+            "0x0000000000000000000000005555555555555555555555555555555555555555",
+            "0x0000000000000000000000005555555555555555555555555555555555555555",
+            "0x0000000000000000000000005555555555555555555555555555555555555555"
+          ],
+          "match": true
+        },
+        {
+          "id": "64553",
+          "name": "poolInitCodeHash",
+          "type": "bytes32",
+          "expected": "0x7ef2b01a451cbf890790278981756372e549443802ece149dc0b592cbc114ee9",
+          "getterResult": "0x7ef2b01a451cbf890790278981756372e549443802ece149dc0b592cbc114ee9",
+          "ranges": [
+            {
+              "start": 444,
+              "length": 32
+            },
+            {
+              "start": 9554,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x7ef2b01a451cbf890790278981756372e549443802ece149dc0b592cbc114ee9",
+            "0x7ef2b01a451cbf890790278981756372e549443802ece149dc0b592cbc114ee9"
+          ],
+          "match": true
+        },
+        {
+          "id": "64555",
+          "name": "tickSpacing",
+          "type": "int24",
+          "expected": 200,
+          "getterResult": "0x00000000000000000000000000000000000000000000000000000000000000c8",
+          "ranges": [
+            {
+              "start": 503,
+              "length": 32
+            },
+            {
+              "start": 970,
+              "length": 32
+            },
+            {
+              "start": 2570,
+              "length": 32
+            },
+            {
+              "start": 7167,
+              "length": 32
+            },
+            {
+              "start": 9916,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x00000000000000000000000000000000000000000000000000000000000000c8",
+            "0x00000000000000000000000000000000000000000000000000000000000000c8",
+            "0x00000000000000000000000000000000000000000000000000000000000000c8",
+            "0x00000000000000000000000000000000000000000000000000000000000000c8",
+            "0x00000000000000000000000000000000000000000000000000000000000000c8"
+          ],
+          "match": true
+        }
+      ],
+      "runtimeBytes": 18296,
+      "compiledRuntimeBytes": 18296,
+      "runtimeSha256": "6dc6a228570dd8ee003c268405b99fbaf54fbd55083cfff00d6ac263bd3dcc31",
+      "runtimeKeccak256": "0x9592864285badd12a9346527349af7b881f7b8a5bd7df4d1167642b747238b7d",
+      "immutableRanges": 28,
+      "runtimeMatchExcludingOnlyCompilerImmutableRanges": true,
+      "allImmutableValuesMatch": true,
+      "exactRuntimeMatchesAfterExpectedImmutableSubstitution": true,
+      "maskedRuntimeSha256": "36e6280bbe2cc97df265a9d816952628260f1467ae741f5cf1a127a527915e6a",
+      "creationTransactionConfirmed": true,
+      "creationBlock": "0x2e129db",
+      "creationBlockHash": "0x965d8a3dc488b1521e5a01a60acbe0fa891149f00fa38794447e6d9d77cf76ea",
+      "creationTransactionInputMatchesJournal": true,
+      "creationTransactionMatchesCompiledCodeAndArguments": true,
+      "pass": true
+    },
+    {
+      "network": "hyperevm",
+      "chainId": 999,
+      "role": "components",
+      "address": "0xa56385A5C8c970027A1BdAf8f209E39306e968bd",
+      "contractName": "FastLaunchComponentsCL",
+      "block": "0x2e12fb0",
+      "creation": {
+        "network": "hyperevm",
+        "chainId": 999,
+        "role": "components",
+        "address": "0xa56385A5C8c970027A1BdAf8f209E39306e968bd",
+        "contractName": "FastLaunchComponentsCL",
+        "contractPath": "src/cl/FastLaunchComponentsCL.sol",
+        "standardJson": "standard-json/FastLaunchComponentsCL.json",
+        "creationTransactionHash": "0xcc0f15f20dd45d3b7ea3eb14a4b3ff71d06897f47660b28d38d48ed3186fc176",
+        "creationType": "internal CREATE by factory",
+        "deployer": "0x88484e4304604446F43D2751d50FCfb1dc027d37",
+        "constructorArguments": "0x",
+        "constructorArgumentsHuman": [],
+        "creationBytecodeMatchesLocal": true,
+        "creationAddressMatches": true
+      },
+      "immutableChecks": [
+        {
+          "id": "64340",
+          "name": "factory",
+          "type": "address",
+          "expected": "0x88484e4304604446F43D2751d50FCfb1dc027d37",
+          "getterResult": "0x00000000000000000000000088484e4304604446f43d2751d50fcfb1dc027d37",
+          "ranges": [
+            {
+              "start": 73,
+              "length": 32
+            },
+            {
+              "start": 371,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x00000000000000000000000088484e4304604446f43d2751d50fcfb1dc027d37",
+            "0x00000000000000000000000088484e4304604446f43d2751d50fcfb1dc027d37"
+          ],
+          "match": true
+        }
+      ],
+      "runtimeBytes": 12667,
+      "compiledRuntimeBytes": 12667,
+      "runtimeSha256": "d684a531eb74094a517059af4e1cdb3bc1af242563ebe5e3054141186791b4be",
+      "runtimeKeccak256": "0x0e7d849d627008d7c79c63c68014c4e09db0bb3d6c18b2710d7f94850c959899",
+      "immutableRanges": 2,
+      "runtimeMatchExcludingOnlyCompilerImmutableRanges": true,
+      "allImmutableValuesMatch": true,
+      "exactRuntimeMatchesAfterExpectedImmutableSubstitution": true,
+      "maskedRuntimeSha256": "b7258ca032e69c88de34fa6a3aab7d1ea33ab6dbc6e05f018b037e38f1c078a9",
+      "creationTransactionConfirmed": true,
+      "creationBlock": "0x2e129db",
+      "creationBlockHash": "0x965d8a3dc488b1521e5a01a60acbe0fa891149f00fa38794447e6d9d77cf76ea",
+      "creationTransactionInputMatchesJournal": true,
+      "internalCreationEvidence": "initCode from local broadcast journal; deterministic factory nonce 1; on-chain factory.components() is checked in factory row",
+      "pass": true
+    },
+    {
+      "network": "arc",
+      "chainId": 5042,
+      "role": "registry",
+      "address": "0x3202AE94BD2530c83DeBceaF7a99c76651EABFAf",
+      "contractName": "FastLaunchRegistry",
+      "block": "0x18568ec",
+      "creation": {
+        "network": "arc",
+        "chainId": 5042,
+        "role": "registry",
+        "address": "0x3202AE94BD2530c83DeBceaF7a99c76651EABFAf",
+        "contractName": "FastLaunchRegistry",
+        "contractPath": "src/FastLaunchRegistry.sol",
+        "standardJson": "standard-json/FastLaunchRegistry.json",
+        "creationTransactionHash": "0x61204873299bdea072df8d97a399470bf187a1d3b9602a34d1eacd72d8928984",
+        "creationType": "top-level CREATE",
+        "deployer": "0xc570fbeb05fe1ca1bd52b7780d747021d6aab245",
+        "constructorArguments": "0x000000000000000000000000c570fbeb05fe1ca1bd52b7780d747021d6aab2450000000000000000000000001dd6785c96328fb2d8d312c01611a828e6b208e30000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000271000000000000000000000000000000000000000000000000000000000000027100000000000000000000000000000000000000000000000000000000000002710000000000000000000000000000000000000000000000000000000000000271000000000000000000000000000000000000000000000000000000000000000c80000000000000000000000000000000000000000000000000000000000000000",
+        "constructorArgumentsHuman": [
+          "0xc570FBEB05FE1CA1bd52B7780D747021D6AAb245",
+          "0x1Dd6785c96328FB2d8D312c01611a828E6B208E3",
+          "(1, 10000, 10000, 10000, 10000, 200)",
+          "0"
+        ],
+        "creationBytecodeMatchesLocal": true,
+        "creationAddressMatches": true
+      },
+      "immutableChecks": [
+        {
+          "id": "61861",
+          "name": "treasury",
+          "type": "address payable",
+          "expected": "0x1Dd6785c96328FB2d8D312c01611a828E6B208E3",
+          "getterResult": "0x0000000000000000000000001dd6785c96328fb2d8d312c01611a828e6b208e3",
+          "ranges": [
+            {
+              "start": 1654,
+              "length": 32
+            },
+            {
+              "start": 2242,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x0000000000000000000000001dd6785c96328fb2d8d312c01611a828e6b208e3",
+            "0x0000000000000000000000001dd6785c96328fb2d8d312c01611a828e6b208e3"
+          ],
+          "match": true
+        }
+      ],
+      "runtimeBytes": 3937,
+      "compiledRuntimeBytes": 3937,
+      "runtimeSha256": "40a5fb163cf25aa3ea57583639833c353e60597308af86e8c3866b9a0aaf6ca5",
+      "runtimeKeccak256": "0x5ded11f31bd0a86dc0080c646d6da3598655d1ccbfca648b4647e8e2fcafe2cf",
+      "immutableRanges": 2,
+      "runtimeMatchExcludingOnlyCompilerImmutableRanges": true,
+      "allImmutableValuesMatch": true,
+      "exactRuntimeMatchesAfterExpectedImmutableSubstitution": true,
+      "maskedRuntimeSha256": "0643edb63c21de8c5c3db5b4fe5eff67014a8f37c0a72747e6c0f1378c6369a6",
+      "creationTransactionConfirmed": true,
+      "creationBlock": "0x1855402",
+      "creationBlockHash": "0x6ea033885beb88716986eb2163d6af5309d9036880b53bd1296d05f3fc9b15bf",
+      "creationTransactionInputMatchesJournal": true,
+      "creationTransactionMatchesCompiledCodeAndArguments": true,
+      "pass": true
+    },
+    {
+      "network": "arc",
+      "chainId": 5042,
+      "role": "factory",
+      "address": "0x391CCEE4A73AC944C83a2b18156785551c11C5C7",
+      "contractName": "FastLaunchFactoryETH",
+      "block": "0x18568ec",
+      "creation": {
+        "network": "arc",
+        "chainId": 5042,
+        "role": "factory",
+        "address": "0x391CCEE4A73AC944C83a2b18156785551c11C5C7",
+        "contractName": "FastLaunchFactoryETH",
+        "contractPath": "src/FastLaunchFactoryETH.sol",
+        "standardJson": "standard-json/FastLaunchFactoryETH.json",
+        "creationTransactionHash": "0x9965662dce9f3cb70736e079718d024ede0010db50f1746a01fd0f1ecd58c83b",
+        "creationType": "top-level CREATE",
+        "deployer": "0xc570fbeb05fe1ca1bd52b7780d747021d6aab245",
+        "constructorArguments": "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e409510000000000000000000000003202ae94bd2530c83debceaf7a99c76651eabfaf",
+        "constructorArgumentsHuman": [
+          "0x8366a39CC670B4001A1121B8F6A443A643e40951",
+          "0x3202AE94BD2530c83DeBceaF7a99c76651EABFAf"
+        ],
+        "creationBytecodeMatchesLocal": true,
+        "creationAddressMatches": true
+      },
+      "immutableChecks": [
+        {
+          "id": "54616",
+          "name": "manager",
+          "type": "contract IPoolManager",
+          "expected": "0x8366a39CC670B4001A1121B8F6A443A643e40951",
+          "getterResult": "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+          "ranges": [
+            {
+              "start": 2246,
+              "length": 32
+            },
+            {
+              "start": 2352,
+              "length": 32
+            },
+            {
+              "start": 2646,
+              "length": 32
+            },
+            {
+              "start": 4218,
+              "length": 32
+            },
+            {
+              "start": 5086,
+              "length": 32
+            },
+            {
+              "start": 5727,
+              "length": 32
+            },
+            {
+              "start": 8668,
+              "length": 32
+            },
+            {
+              "start": 14319,
+              "length": 32
+            },
+            {
+              "start": 15061,
+              "length": 32
+            },
+            {
+              "start": 15769,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951"
+          ],
+          "match": true
+        },
+        {
+          "id": "54619",
+          "name": "registry",
+          "type": "contract FastLaunchRegistry",
+          "expected": "0x3202AE94BD2530c83DeBceaF7a99c76651EABFAf",
+          "getterResult": "0x0000000000000000000000003202ae94bd2530c83debceaf7a99c76651eabfaf",
+          "ranges": [
+            {
+              "start": 429,
+              "length": 32
+            },
+            {
+              "start": 973,
+              "length": 32
+            },
+            {
+              "start": 1303,
+              "length": 32
+            },
+            {
+              "start": 2444,
+              "length": 32
+            },
+            {
+              "start": 2572,
+              "length": 32
+            },
+            {
+              "start": 3718,
+              "length": 32
+            },
+            {
+              "start": 7558,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x0000000000000000000000003202ae94bd2530c83debceaf7a99c76651eabfaf",
+            "0x0000000000000000000000003202ae94bd2530c83debceaf7a99c76651eabfaf",
+            "0x0000000000000000000000003202ae94bd2530c83debceaf7a99c76651eabfaf",
+            "0x0000000000000000000000003202ae94bd2530c83debceaf7a99c76651eabfaf",
+            "0x0000000000000000000000003202ae94bd2530c83debceaf7a99c76651eabfaf",
+            "0x0000000000000000000000003202ae94bd2530c83debceaf7a99c76651eabfaf",
+            "0x0000000000000000000000003202ae94bd2530c83debceaf7a99c76651eabfaf"
+          ],
+          "match": true
+        },
+        {
+          "id": "54622",
+          "name": "components",
+          "type": "contract FastLaunchComponentsETH",
+          "expected": "0x6013aeB253bDA71e064EDA968F473173E99B357E",
+          "getterResult": "0x0000000000000000000000006013aeb253bda71e064eda968f473173e99b357e",
+          "ranges": [
+            {
+              "start": 290,
+              "length": 32
+            },
+            {
+              "start": 2802,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x0000000000000000000000006013aeb253bda71e064eda968f473173e99b357e",
+            "0x0000000000000000000000006013aeb253bda71e064eda968f473173e99b357e"
+          ],
+          "match": true
+        }
+      ],
+      "runtimeBytes": 20890,
+      "compiledRuntimeBytes": 20890,
+      "runtimeSha256": "c25a1b0bcca838e4acfee63e5da024257faae3dcaa2e0e362e905642d56a4dd2",
+      "runtimeKeccak256": "0xea0c75e55303170c8a1cb8d5c83b8e0d0d227fb7fb3f6b15c142b1cdef4dfd6a",
+      "immutableRanges": 19,
+      "runtimeMatchExcludingOnlyCompilerImmutableRanges": true,
+      "allImmutableValuesMatch": true,
+      "exactRuntimeMatchesAfterExpectedImmutableSubstitution": true,
+      "maskedRuntimeSha256": "ad39521ba9b7630152a3a2f6c01f51f09184e80368c83e2c1a2a34fd621c91ee",
+      "creationTransactionConfirmed": true,
+      "creationBlock": "0x1855406",
+      "creationBlockHash": "0x43d2945fb9bcec730b561cf593e6fb14d8e5d2a6991547d9dbc86fe3625c4f92",
+      "creationTransactionInputMatchesJournal": true,
+      "creationTransactionMatchesCompiledCodeAndArguments": true,
+      "pass": true
+    },
+    {
+      "network": "arc",
+      "chainId": 5042,
+      "role": "components",
+      "address": "0x6013aeB253bDA71e064EDA968F473173E99B357E",
+      "contractName": "FastLaunchComponentsETH",
+      "block": "0x18568ec",
+      "creation": {
+        "network": "arc",
+        "chainId": 5042,
+        "role": "components",
+        "address": "0x6013aeB253bDA71e064EDA968F473173E99B357E",
+        "contractName": "FastLaunchComponentsETH",
+        "contractPath": "src/FastLaunchComponentsETH.sol",
+        "standardJson": "standard-json/FastLaunchComponentsETH.json",
+        "creationTransactionHash": "0x9965662dce9f3cb70736e079718d024ede0010db50f1746a01fd0f1ecd58c83b",
+        "creationType": "internal CREATE by factory",
+        "deployer": "0x391CCEE4A73AC944C83a2b18156785551c11C5C7",
+        "constructorArguments": "0x",
+        "constructorArgumentsHuman": [],
+        "creationBytecodeMatchesLocal": true,
+        "creationAddressMatches": true
+      },
+      "immutableChecks": [
+        {
+          "id": "53008",
+          "name": "factory",
+          "type": "address",
+          "expected": "0x391CCEE4A73AC944C83a2b18156785551c11C5C7",
+          "getterResult": "0x000000000000000000000000391ccee4a73ac944c83a2b18156785551c11c5c7",
+          "ranges": [
+            {
+              "start": 69,
+              "length": 32
+            },
+            {
+              "start": 445,
+              "length": 32
+            },
+            {
+              "start": 712,
+              "length": 32
+            },
+            {
+              "start": 1030,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x000000000000000000000000391ccee4a73ac944c83a2b18156785551c11c5c7",
+            "0x000000000000000000000000391ccee4a73ac944c83a2b18156785551c11c5c7",
+            "0x000000000000000000000000391ccee4a73ac944c83a2b18156785551c11c5c7",
+            "0x000000000000000000000000391ccee4a73ac944c83a2b18156785551c11c5c7"
+          ],
+          "match": true
+        }
+      ],
+      "runtimeBytes": 13844,
+      "compiledRuntimeBytes": 13844,
+      "runtimeSha256": "171694e4fe3bf99fc3df82587a112dae5a93c28a00026a545359b4d42b53ab8b",
+      "runtimeKeccak256": "0x0ec156088292cba504b9da339546117bd9eaed17350081f26cf4f04d41baca19",
+      "immutableRanges": 4,
+      "runtimeMatchExcludingOnlyCompilerImmutableRanges": true,
+      "allImmutableValuesMatch": true,
+      "exactRuntimeMatchesAfterExpectedImmutableSubstitution": true,
+      "maskedRuntimeSha256": "3932f841a26bceb951f258959471094691cf85cdaee909c4f3dbd40c24cf0b44",
+      "creationTransactionConfirmed": true,
+      "creationBlock": "0x1855406",
+      "creationBlockHash": "0x43d2945fb9bcec730b561cf593e6fb14d8e5d2a6991547d9dbc86fe3625c4f92",
+      "creationTransactionInputMatchesJournal": true,
+      "internalCreationEvidence": "initCode from local broadcast journal; deterministic factory nonce 1; on-chain factory.components() is checked in factory row",
+      "pass": true
+    },
+    {
+      "network": "robinhood",
+      "chainId": 4663,
+      "role": "registry",
+      "address": "0x5Cd02287d991500465dd816A806B415FD2fC460C",
+      "contractName": "FastLaunchRegistry",
+      "block": "0x525e5ff",
+      "creation": {
+        "network": "robinhood",
+        "chainId": 4663,
+        "role": "registry",
+        "address": "0x5Cd02287d991500465dd816A806B415FD2fC460C",
+        "contractName": "FastLaunchRegistry",
+        "contractPath": "src/FastLaunchRegistry.sol",
+        "standardJson": "standard-json/FastLaunchRegistry.json",
+        "creationTransactionHash": "0x7a6c1c13650d4f2271493b157c17372a8421ca294ee334c4cc1c75961bded902",
+        "creationType": "top-level CREATE",
+        "deployer": "0xc570fbeb05fe1ca1bd52b7780d747021d6aab245",
+        "constructorArguments": "0x000000000000000000000000c570fbeb05fe1ca1bd52b7780d747021d6aab2450000000000000000000000001dd6785c96328fb2d8d312c01611a828e6b208e30000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000271000000000000000000000000000000000000000000000000000000000000027100000000000000000000000000000000000000000000000000000000000002710000000000000000000000000000000000000000000000000000000000000271000000000000000000000000000000000000000000000000000000000000000c80000000000000000000000000000000000000000000000000000000000000000",
+        "constructorArgumentsHuman": [
+          "0xc570FBEB05FE1CA1bd52B7780D747021D6AAb245",
+          "0x1Dd6785c96328FB2d8D312c01611a828E6B208E3",
+          "(1, 10000, 10000, 10000, 10000, 200)",
+          "0"
+        ],
+        "creationBytecodeMatchesLocal": true,
+        "creationAddressMatches": true
+      },
+      "immutableChecks": [
+        {
+          "id": "61861",
+          "name": "treasury",
+          "type": "address payable",
+          "expected": "0x1Dd6785c96328FB2d8D312c01611a828E6B208E3",
+          "getterResult": "0x0000000000000000000000001dd6785c96328fb2d8d312c01611a828e6b208e3",
+          "ranges": [
+            {
+              "start": 1654,
+              "length": 32
+            },
+            {
+              "start": 2242,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x0000000000000000000000001dd6785c96328fb2d8d312c01611a828e6b208e3",
+            "0x0000000000000000000000001dd6785c96328fb2d8d312c01611a828e6b208e3"
+          ],
+          "match": true
+        }
+      ],
+      "runtimeBytes": 3937,
+      "compiledRuntimeBytes": 3937,
+      "runtimeSha256": "40a5fb163cf25aa3ea57583639833c353e60597308af86e8c3866b9a0aaf6ca5",
+      "runtimeKeccak256": "0x5ded11f31bd0a86dc0080c646d6da3598655d1ccbfca648b4647e8e2fcafe2cf",
+      "immutableRanges": 2,
+      "runtimeMatchExcludingOnlyCompilerImmutableRanges": true,
+      "allImmutableValuesMatch": true,
+      "exactRuntimeMatchesAfterExpectedImmutableSubstitution": true,
+      "maskedRuntimeSha256": "0643edb63c21de8c5c3db5b4fe5eff67014a8f37c0a72747e6c0f1378c6369a6",
+      "creationTransactionConfirmed": true,
+      "creationBlock": "0x5258b18",
+      "creationBlockHash": "0x0718afa0317fb483fa8e1ffecd0afeced657ab7d9bdd42789537e290fcbdf3ee",
+      "creationTransactionInputMatchesJournal": true,
+      "creationTransactionMatchesCompiledCodeAndArguments": true,
+      "pass": true
+    },
+    {
+      "network": "robinhood",
+      "chainId": 4663,
+      "role": "factory",
+      "address": "0x549693010b87D7c06E599285DE0b530838c56861",
+      "contractName": "FastLaunchFactoryETH",
+      "block": "0x525e5ff",
+      "creation": {
+        "network": "robinhood",
+        "chainId": 4663,
+        "role": "factory",
+        "address": "0x549693010b87D7c06E599285DE0b530838c56861",
+        "contractName": "FastLaunchFactoryETH",
+        "contractPath": "src/FastLaunchFactoryETH.sol",
+        "standardJson": "standard-json/FastLaunchFactoryETH.json",
+        "creationTransactionHash": "0x4fefe4ae8e384c308772d87317309e5729d2cd0d267d604ec7cc2738caa95f80",
+        "creationType": "top-level CREATE",
+        "deployer": "0xc570fbeb05fe1ca1bd52b7780d747021d6aab245",
+        "constructorArguments": "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e409510000000000000000000000005cd02287d991500465dd816a806b415fd2fc460c",
+        "constructorArgumentsHuman": [
+          "0x8366a39CC670B4001A1121B8F6A443A643e40951",
+          "0x5Cd02287d991500465dd816A806B415FD2fC460C"
+        ],
+        "creationBytecodeMatchesLocal": true,
+        "creationAddressMatches": true
+      },
+      "immutableChecks": [
+        {
+          "id": "54616",
+          "name": "manager",
+          "type": "contract IPoolManager",
+          "expected": "0x8366a39CC670B4001A1121B8F6A443A643e40951",
+          "getterResult": "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+          "ranges": [
+            {
+              "start": 2246,
+              "length": 32
+            },
+            {
+              "start": 2352,
+              "length": 32
+            },
+            {
+              "start": 2646,
+              "length": 32
+            },
+            {
+              "start": 4218,
+              "length": 32
+            },
+            {
+              "start": 5086,
+              "length": 32
+            },
+            {
+              "start": 5727,
+              "length": 32
+            },
+            {
+              "start": 8668,
+              "length": 32
+            },
+            {
+              "start": 14319,
+              "length": 32
+            },
+            {
+              "start": 15061,
+              "length": 32
+            },
+            {
+              "start": 15769,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951",
+            "0x0000000000000000000000008366a39cc670b4001a1121b8f6a443a643e40951"
+          ],
+          "match": true
+        },
+        {
+          "id": "54619",
+          "name": "registry",
+          "type": "contract FastLaunchRegistry",
+          "expected": "0x5Cd02287d991500465dd816A806B415FD2fC460C",
+          "getterResult": "0x0000000000000000000000005cd02287d991500465dd816a806b415fd2fc460c",
+          "ranges": [
+            {
+              "start": 429,
+              "length": 32
+            },
+            {
+              "start": 973,
+              "length": 32
+            },
+            {
+              "start": 1303,
+              "length": 32
+            },
+            {
+              "start": 2444,
+              "length": 32
+            },
+            {
+              "start": 2572,
+              "length": 32
+            },
+            {
+              "start": 3718,
+              "length": 32
+            },
+            {
+              "start": 7558,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x0000000000000000000000005cd02287d991500465dd816a806b415fd2fc460c",
+            "0x0000000000000000000000005cd02287d991500465dd816a806b415fd2fc460c",
+            "0x0000000000000000000000005cd02287d991500465dd816a806b415fd2fc460c",
+            "0x0000000000000000000000005cd02287d991500465dd816a806b415fd2fc460c",
+            "0x0000000000000000000000005cd02287d991500465dd816a806b415fd2fc460c",
+            "0x0000000000000000000000005cd02287d991500465dd816a806b415fd2fc460c",
+            "0x0000000000000000000000005cd02287d991500465dd816a806b415fd2fc460c"
+          ],
+          "match": true
+        },
+        {
+          "id": "54622",
+          "name": "components",
+          "type": "contract FastLaunchComponentsETH",
+          "expected": "0x89e07BA896bAeA6d80A69F7B68eb150BEcACC04f",
+          "getterResult": "0x00000000000000000000000089e07ba896baea6d80a69f7b68eb150becacc04f",
+          "ranges": [
+            {
+              "start": 290,
+              "length": 32
+            },
+            {
+              "start": 2802,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x00000000000000000000000089e07ba896baea6d80a69f7b68eb150becacc04f",
+            "0x00000000000000000000000089e07ba896baea6d80a69f7b68eb150becacc04f"
+          ],
+          "match": true
+        }
+      ],
+      "runtimeBytes": 20890,
+      "compiledRuntimeBytes": 20890,
+      "runtimeSha256": "7ee1e6674da5b973bfda82251e4faf5d963a0aea78885a16dea1a7ef7112b2de",
+      "runtimeKeccak256": "0xe5e8991121a8747d3f841af1677263842e831dd29ed3cc58bbba15e6d036b6ea",
+      "immutableRanges": 19,
+      "runtimeMatchExcludingOnlyCompilerImmutableRanges": true,
+      "allImmutableValuesMatch": true,
+      "exactRuntimeMatchesAfterExpectedImmutableSubstitution": true,
+      "maskedRuntimeSha256": "ad39521ba9b7630152a3a2f6c01f51f09184e80368c83e2c1a2a34fd621c91ee",
+      "creationTransactionConfirmed": true,
+      "creationBlock": "0x5258b45",
+      "creationBlockHash": "0xe5e84f740069f1ed11dbb7ebdd0b25693c150f8f9868518415395988a4221723",
+      "creationTransactionInputMatchesJournal": true,
+      "creationTransactionMatchesCompiledCodeAndArguments": true,
+      "pass": true
+    },
+    {
+      "network": "robinhood",
+      "chainId": 4663,
+      "role": "components",
+      "address": "0x89e07BA896bAeA6d80A69F7B68eb150BEcACC04f",
+      "contractName": "FastLaunchComponentsETH",
+      "block": "0x525e5ff",
+      "creation": {
+        "network": "robinhood",
+        "chainId": 4663,
+        "role": "components",
+        "address": "0x89e07BA896bAeA6d80A69F7B68eb150BEcACC04f",
+        "contractName": "FastLaunchComponentsETH",
+        "contractPath": "src/FastLaunchComponentsETH.sol",
+        "standardJson": "standard-json/FastLaunchComponentsETH.json",
+        "creationTransactionHash": "0x4fefe4ae8e384c308772d87317309e5729d2cd0d267d604ec7cc2738caa95f80",
+        "creationType": "internal CREATE by factory",
+        "deployer": "0x549693010b87D7c06E599285DE0b530838c56861",
+        "constructorArguments": "0x",
+        "constructorArgumentsHuman": [],
+        "creationBytecodeMatchesLocal": true,
+        "creationAddressMatches": true
+      },
+      "immutableChecks": [
+        {
+          "id": "53008",
+          "name": "factory",
+          "type": "address",
+          "expected": "0x549693010b87D7c06E599285DE0b530838c56861",
+          "getterResult": "0x000000000000000000000000549693010b87d7c06e599285de0b530838c56861",
+          "ranges": [
+            {
+              "start": 69,
+              "length": 32
+            },
+            {
+              "start": 445,
+              "length": 32
+            },
+            {
+              "start": 712,
+              "length": 32
+            },
+            {
+              "start": 1030,
+              "length": 32
+            }
+          ],
+          "values": [
+            "0x000000000000000000000000549693010b87d7c06e599285de0b530838c56861",
+            "0x000000000000000000000000549693010b87d7c06e599285de0b530838c56861",
+            "0x000000000000000000000000549693010b87d7c06e599285de0b530838c56861",
+            "0x000000000000000000000000549693010b87d7c06e599285de0b530838c56861"
+          ],
+          "match": true
+        }
+      ],
+      "runtimeBytes": 13844,
+      "compiledRuntimeBytes": 13844,
+      "runtimeSha256": "a0a72ad1187f7226e20e531126ebced7cc0f4170d770b15332c8881bfb4e1fe1",
+      "runtimeKeccak256": "0x0db0ace5c03f2c3cf04592322e663445323094c2005f7b634e2bc25322535bf2",
+      "immutableRanges": 4,
+      "runtimeMatchExcludingOnlyCompilerImmutableRanges": true,
+      "allImmutableValuesMatch": true,
+      "exactRuntimeMatchesAfterExpectedImmutableSubstitution": true,
+      "maskedRuntimeSha256": "3932f841a26bceb951f258959471094691cf85cdaee909c4f3dbd40c24cf0b44",
+      "creationTransactionConfirmed": true,
+      "creationBlock": "0x5258b45",
+      "creationBlockHash": "0xe5e84f740069f1ed11dbb7ebdd0b25693c150f8f9868518415395988a4221723",
+      "creationTransactionInputMatchesJournal": true,
+      "internalCreationEvidence": "initCode from local broadcast journal; deterministic factory nonce 1; on-chain factory.components() is checked in factory row",
+      "pass": true
+    }
+  ],
+  "all12Pass": true
+}

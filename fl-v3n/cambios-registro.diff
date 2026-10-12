@@ -1,0 +1,24 @@
+--- fl-eth/src/FastLaunchRegistry.sol
++++ fl-v3n/src/FastLaunchRegistry.sol
+@@ -52,5 +52,6 @@
+         Stablecoin,
+         Stock,
+-        StockPlain
++        StockPlain,
++        Crypto
+     }
+ 
+@@ -100,5 +101,5 @@
+             } else {
+                 if (
+-                    q.kind == Kind.Native || currency.code.length == 0 || (q.decimals != 6 && q.decimals != 18)
++                    q.kind == Kind.Native || currency.code.length == 0 || (q.decimals != 6 && q.decimals != 8 && q.decimals != 18)
+                         || IERC20Metadata(currency).decimals() != q.decimals
+                 ) revert InvalidConfiguration();
+@@ -106,5 +107,5 @@
+                     (bool ok, bytes memory data) = currency.staticcall(abi.encodeWithSignature("uiMultiplier()"));
+                     if (
+-                        q.decimals != 18 || !ok || data.length != 32
++                        (q.decimals != 8 && q.decimals != 18) || !ok || data.length != 32
+                             || abi.decode(data, (uint256)) == 0
+                     ) {
